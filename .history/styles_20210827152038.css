@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    top: 0;
+    left: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.interface_wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ======================HEADER======================= */
+Header{
+    background: rgb(23,34,47);
+    color: #FFFFFF;
+    padding: 10px 0;
+   
+}
+.header_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.logo_box{
+    display: flex;
+    align-items: center;
+}
+.logo_box p{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Rozha One', serif;
+
+}
+.logo_box span{
+    color: rgb(10, 199, 117);
+}
+Header .menu nav ul{
+    display: flex;
+    padding: 0;
+}
+Header .menu nav li{
+    list-style: none;
+    margin: 0 20px;
+}
+Header .menu nav a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 19px;
+    
+}
+
+/* ======================SHOWCASE_SECTION======================= */
+.showcase_sec{
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-image: url('https://images.unsplash.com/photo-1544890603-cf0ce2d65561?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.showcase p:nth-child(1) {
+    font-size: 85px;
+    font-family: 'Rozha One', serif;
+    width: 800px;
+    border-left: 3px solid rgb(10, 199, 117);
+    padding-left: 10px;
+    line-height: 1;
+    margin: 0 auto;
+    color: #FFFFFF;
+    
+}
+.showcase p:nth-child(1) span {
+    color: rgb(10, 199, 117);
+}
+
+.showcase p:nth-child(2) {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    width: 650px;
+    line-height: 2;
+    margin-top: 75px;
+}
+
+.btns_box{
+    margin-top: 40px;
+}
+.btns_box button {
+    border: 2px solid rgb(10, 199, 117);
+    padding: 0 45px;
+    height: 55px;
+    font-size: 16px;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 19px;
+    cursor: pointer;
+}
+
+.btns_box button:nth-child(1) {
+    background: rgb(10, 199, 117);
+}
+.showcase button:nth-child(2) {
+    color:#FFFFFF;
+    margin-left: 10px;
+    background: none;
+}
+
+
+/* ======================ABOUT US======================= */
+.about_us_sec{
+    padding-bottom: 50px;
+}
+.about_us {
+    display: flex;
+    flex-direction: column;
+}
+.about_us p:nth-child(1) {
+    font-size: 40px;
+    border-left: 3px solid rgb(10, 199, 117);
+    padding-left: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    
+}
+.about_us p:nth-child(1) span {
+    color: rgb(10, 199, 117);
+}
+
+.about_us p:nth-child(2) {
+    font-size: 22px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#app{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#app img{
+    width: 200px;
+    height: 200px;
+    border-radius:100%;
+}
+#app p{
+    text-align: center;
+    font-size: 25px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-style: normal;
+}
+
+
+/* ======================SERVICES======================= */
+
+.services_sec{
+    background: rgb(35, 49, 66);
+    color: rgb(255, 255, 255);
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.services_box{
+    display: flex;
+    margin: 50px 0;
+    align-items: flex-start;
+}
+.services_box img{
+    margin-right: 10px;
+}
+.services_box p:nth-child(1){
+    font-size: 30px;
+    font-weight: bold;
+}
+.services_box p:nth-child(2){
+    font-size: 14px;
+    width: 280px;
+    margin-top: 20px;
+}
+
+
+
+/* ======================OUR BEST AGENTS======================= */
+
+
+.agents_box{
+    width: 300px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, 
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 10px;
+    text-align: center;
+}
+.agents_box p:nth-child(2){
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.agents_box p:nth-child(3){
+    font-size: 15px;
+    font-weight: 500;
+}
+.agents_image_box{
+    width: 100%;
+}
+.agents_image_box img{
+    width: 100%;
+}
+.agents_social{
+    text-align: center;
+    margin: 10px 0;
+}
+.agents_social img{
+    margin: 0 10px;
+}

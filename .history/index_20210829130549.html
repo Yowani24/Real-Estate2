@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real State</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ============FONT-FAMILY============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rozha+One&display=swap" rel="stylesheet">
+
+    <!-- ======================VUELS CDN=================== -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+</head>
+<body>
+    <Header>
+        <div class="interface_wrapper header_wrapper">
+            <div class="logo_box">
+                <img src="/images/realLogo.png" alt=""> 
+                <p><span>Real</span> Estate</p>
+            </div>
+    
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Agents</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </Header>
+
+    <section class="showcase_sec">
+        <div class="interface_wrapper showcase">
+            <p>Give Life For Your <br/>Dream <span>Home</span></p>
+            <p>Always on the lookout for the hi-tech advancements.  Build not only a product that can sell well, but a platform through which to deliver it.</p>
+
+            <div class="btns_box">
+                <button>Read more</button>
+                <button>Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about_us_sec">
+        <div class="interface_wrapper about_us">
+            <p><span>About</span> Us</p>
+            <p>A modern and unique style </p>
+
+            <div id="app">
+                <div v-for="item in items">
+                    <img :src="item.ima" alt="">
+                    <p>{{item.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services_sec">
+        <div id="services" class="interface_wrapper services">
+            <div class="services_box" v-for="item in items">
+                <img :src="item.ima" alt="">
+                <div>
+                    <p>{{item.titulo}}</p>
+                    <p>{{item.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="best_agents_sec">
+        <div class="interface_wrapper best_agents">
+            <div id="bestAgents" class="bestAgents">
+                <div>
+                    <p><span>Our</span> Best Agents</p>
+                    <button>View Agents</button>
+                </div>
+                <div class="agents_box" v-for="item in items">
+                    <div class="agents_image_box">
+                        <img :src="item.ima" alt="">
+                    </div>
+                    <p>{{item.name}}</p>
+                    <p>{{item.office}}</p>
+                    <div class="agents_social">
+                        <img src="/images/facebook.png" alt="">
+                        <img src="/images/twitter.png" alt="">
+                        <img src="/images/email.png" alt="">
+                        <img src="/images/linkedin.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="whyUs_sec">
+        <div class="interface_wrapper whyUs">
+
+        </div>
+    </section>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                items: [
+                    {ima:'https://images.unsplash.com/photo-1583231684537-bd79dc887244?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60', desc:'Tomin Villa Denmarkd'},
+                    {ima:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60', desc:'Financial Office Romania'},
+                    {ima:'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60', desc:'Cruzz Villa Spain'},
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el: '#services',
+            data: {
+                items: [
+                    {ima:'/images/SEO_Ready_Code.png', titulo:'SEO Ready Code', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/Fully_Responsive.png', titulo:'Fully Responsive', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/Awesome_Features.png', titulo:'Awesome Features', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/5-Star-Support.png', titulo:'5-Star-Support', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/5-Star-Support.png', titulo:'High Customizibility', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/Up-To-Date Software.png', titulo:'Up-To-Date Software', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el: '#bestAgents',
+            data: {
+                items: [
+                    {ima:'https://images.unsplash.com/photo-1598257006408-538c27529235?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60', name:'Yowani da Costa', office:'FOUNDER | CEO'},
+                    {ima:'https://images.unsplash.com/photo-1573496800440-5c9c48a8d0f0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrJTIwZW50cmVwcmVuZXVyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60', name:'Nelumba Nkai', office:'RH'},
+                    {ima:'https://images.unsplash.com/photo-1558222218-b7b54eede3f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNlb3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60', name:'Arnold William', office:'Front End Developer'},
+                    
+                    
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el: '#whyUs',
+            data: {
+                items: [
+                    {position:'.01', title:'Search Property from Anywhere', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
+                    {position:'.02', title:'Professional & Friendly Agents', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
+                    {position:'.03', title:'Buy and Sell Awsome Property', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}
+                    
+                ]
+            }
+        });
+
+    </script>
+</body>
+</html>

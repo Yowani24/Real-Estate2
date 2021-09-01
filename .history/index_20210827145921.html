@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real State</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ============FONT-FAMILY============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rozha+One&display=swap" rel="stylesheet">
+
+    <!-- ======================VUELS CDN=================== -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+</head>
+<body>
+    <Header>
+        <div class="interface_wrapper header_wrapper">
+            <div class="logo_box">
+                <img src="/images/realLogo.png" alt=""> 
+                <p><span>Real</span> Estate</p>
+            </div>
+    
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Agents</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </Header>
+
+    <section class="showcase_sec">
+        <div class="interface_wrapper showcase">
+            <p>Give Life For Your <br/>Dream <span>Home</span></p>
+            <p>Always on the lookout for the hi-tech advancements.  Build not only a product that can sell well, but a platform through which to deliver it.</p>
+
+            <div class="btns_box">
+                <button>Read more</button>
+                <button>Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about_us_sec">
+        <div class="interface_wrapper about_us">
+            <p><span>About</span> Us</p>
+            <p>A modern and unique style </p>
+
+            <div id="app">
+                <div v-for="item in items">
+                    <img :src="item.ima" alt="">
+                    <p>{{item.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services_sec">
+        <div id="services" class="interface_wrapper services">
+            <div class="services_box" v-for="item in items">
+                <img :src="item.ima" alt="">
+                <div>
+                    <p>{{item.titulo}}</p>
+                    <p>{{item.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="best_agents_sec">
+        <div class="interface_wrapper best_agents">
+            <div id="bestAgents">
+                <div>
+                    <p>Our Best Agents</p>
+                    <button>View Agents</button>
+                </div>
+                <div class="agents_box" v-for="item in items">
+                    <div class="agents_image_box">
+                        <img :src="item.ima" alt="">
+                    </div>
+                    <p>{{item.name}}</p>
+                    <p>{{item.office}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                items: [
+                    {ima:'https://images.unsplash.com/photo-1583231684537-bd79dc887244?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60', desc:'Tomin Villa Denmarkd'},
+                    {ima:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60', desc:'Financial Office Romania'},
+                    {ima:'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60', desc:'Cruzz Villa Spain'},
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el: '#services',
+            data: {
+                items: [
+                    {ima:'/images/SEO_Ready_Code.png', titulo:'SEO Ready Code', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/Fully_Responsive.png', titulo:'Fully Responsive', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/Awesome_Features.png', titulo:'Awesome Features', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/5-Star-Support.png', titulo:'5-Star-Support', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/5-Star-Support.png', titulo:'High Customizibility', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    {ima:'/images/Up-To-Date Software.png', titulo:'Up-To-Date Software', desc:'Tincidunt felis dignissim justo congue, non rutrum tortor volutpat .'},
+                    
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el: '#bestAgents',
+            data: {
+                items: [
+                    {ima:'/images//www.jpg', name:'João da Costa', office:'Front End Developer'},
+                    {ima:'/images//www.jpg', name:'João da Costa', office:'Front End Developer'},
+                    {ima:'/images//www.jpg', name:'João da Costa', office:'Front End Developer'},
+                    
+                    
+                ]
+            }
+        });
+
+    </script>
+</body>
+</html>
