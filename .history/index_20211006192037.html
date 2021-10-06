@@ -15,6 +15,11 @@
     <!-- ======================VUELS CDN=================== -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
+
+    <!-- =======================SPLIDEJS CDN==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
 </head>
 <body>
     <Header>
@@ -53,7 +58,7 @@
     <section class="about_us_sec">
         <div class="interface_wrapper about_us">
             <p><span>About</span> Us</p>
-            <p>A modern and unique style </p>
+            <p>A modern and unique style</p>
 
             <div id="app">
                 <div v-for="item in items">
@@ -97,6 +102,28 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="whyUs_sec">
+        <div id="whyUs" class="interface_wrapper whyUs">
+            <h3>Few Resons <br/> <span>Why Choose us</span></h3>
+            <div class="items" v-for="item in items">
+                <p>{{item.position}}</p>
+                <p>{{item.title}}</p>
+                <p>{{item.desc}}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="splide" id="houses" class="houses">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <img class="splide__slide" src="https://images.unsplash.com/photo-1600047508557-92d6db2cf246?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGhvdXNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="product">
+                <img class="splide__slide" src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGhvdXNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                <img class="splide__slide" src="https://images.unsplash.com/photo-1623298371642-416fcc1286d0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fGhvdXNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                <img class="splide__slide" src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODN8fGhvdXNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+            </ul>
         </div>
     </section>
 
@@ -147,13 +174,24 @@
             data: {
                 items: [
                     {position:'.01', title:'Search Property from Anywhere', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
-                    {position:'.01', title:'Professional & Friendly Agents', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
-                    {position:'.01', title:'Buy and Sell Awsome Property', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}
+                    {position:'.02', title:'Professional & Friendly Agents', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
+                    {position:'.03', title:'Buy and Sell Awsome Property', desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni temporibus voluptates adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}
                     
                 ]
             }
         });
-
+        
+        
     </script>
+
+<script>
+	new Splide( '.splide', {
+        type   : 'loop',
+        padding: {
+            right: '18.75rem',
+            left : '18.75rem',
+        },
+    } ).mount();
+</script>
 </body>
 </html>
